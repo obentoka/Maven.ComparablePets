@@ -5,7 +5,7 @@ import io.zipcoder.pets.Pet;
 
 import java.util.Comparator;
 
-public class Application implements Comparator<Pet> {
+public class SortType implements Comparator<Pet> {
 
     public int compare(Pet o1, Pet o2) {
         if(o1.getPet().equalsIgnoreCase(o2.getPet())){

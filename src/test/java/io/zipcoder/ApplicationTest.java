@@ -5,7 +5,6 @@ import io.zipcoder.pets.Cat;
 import io.zipcoder.pets.Dog;
 import io.zipcoder.pets.Pet;
 import io.zipcoder.pets.Shark;
-import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,7 +54,7 @@ public class ApplicationTest
     @Test
     public void comparatoringPets()
     {
-        Application test = new Application();
+        SortType test = new SortType();
         Pet testDog = new Dog("d");
         Pet testCat = new Cat("b");
         Pet testShark = new Shark("f");
@@ -80,7 +79,6 @@ public class ApplicationTest
         expected.add(testCat);
         expected.add(testDog);
 
-        //ArrayList<Pet> actual = petList.sortByClassThenName();
         ArrayList<Pet> actual = expected;
         Collections.sort(actual, test);
 
