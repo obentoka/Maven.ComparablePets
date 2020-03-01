@@ -8,37 +8,12 @@ import java.util.Comparator;
 public class SortType implements Comparator<Pet> {
 
     public int compare(Pet o1, Pet o2) {
-        if(o1.getPet().equalsIgnoreCase(o2.getPet())){
-            int counter = 0;
-            boolean isNotEqual = true;
-            while (isNotEqual){
-                if (o1.getName().toLowerCase().charAt(counter) <
-                        o2.getName().toLowerCase().charAt(counter)){
-                    return -1;
-                }
-                if (o1.getName().toLowerCase().charAt(counter) >
-                        o2.getName().toLowerCase().charAt(counter)){
-                    return 1;
-                }
-                counter++;
-            }
-            return 0;
+        if(o1.getClass().getName().equalsIgnoreCase(o2.getClass().getName())){
+            return o1.getName().compareTo(o2.getName());
 
         }else {
-            int counter = 0;
-            boolean isNotEqual = true;
-            while (isNotEqual){
-                if (o1.getPet().toLowerCase().charAt(counter) <
-                    o2.getPet().toLowerCase().charAt(counter)){
-                    return -1;
-                }
-                if (o1.getPet().toLowerCase().charAt(counter) >
-                        o2.getPet().toLowerCase().charAt(counter)){
-                    return 1;
-                }
-                counter++;
-            }
-            return 0;
+            System.out.println(o1.getClass().getName());
+            return o1.getClass().getName().compareTo(o2.getClass().getName());
         }
     }
 }
